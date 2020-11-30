@@ -8,7 +8,7 @@ import json
 def query_output(request):
     url = 'https://api.ca.sumologic.com/api/v1/search/jobs'
     header_data = {
-        'Authorization': 'Basic c3VnSDFkb2M1TkxzZG06Q1d6d29MWWtTbEJxYkZmSVp6MHJvZmdvSldsanY1aWs1VkhEbjlJTFcwdTFEN1ZmQ3NSTnY5NXFqR0hycEppSQ==',
+        'Authorization': 'Basic c3VnSDFkb2M1TkxzZG06Q1d6d29MWW*****',
         'Accept': 'application/json',
         'Content-type': 'application/json'}
     data = {
