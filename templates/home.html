@@ -1,0 +1,78 @@
+<html lang="en">
+<body>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Querying Sumo Logic...
+                </h1>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-4 is-4">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="field has-addons">
+                            <div class="control is-expanded">
+                                {{ form.Query }}
+                                {{ form.From_Date_Time }}
+                                {{ form.To_Date_Time }}
+                            </div>
+                            <div class="control">
+                                <button type="submit" class="button is-info">
+                                    <h7>Submit Query</h7>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-offset-4 is-4">
+                    <div class="box">
+                        <article class="media">
+                            <div class="media-content">
+                                <div class="content">
+                                    <h4>
+                                        <span class="title">Field: {{ sumo_response.field }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Block ID: {{ sumo_response.blockid }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Message Time: {{ sumo_response.messagetime }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Raw: {{ sumo_response.raw }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Collector ID: {{ sumo_response.collectorid }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Source ID: {{ sumo_response.sourceid }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Collector: {{ sumo_response.collector }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Source Host: {{ sumo_response.sourcehost }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Message ID: {{ sumo_response.messageid }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Source Name: {{ sumo_response.sourcename }}</span>
+                                        <br><br>
+                                        <span class="subtitle">Source Category: {{ sumo_response.sourcecategory }}</span>
+                                        <br><br>
+                                    </h4>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    </footer>
+</body>
+</html>
